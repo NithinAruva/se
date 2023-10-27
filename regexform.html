@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="mail">
+    <button onclick="fun()">Check Email</button>
+
+    <script>
+    function fun() {
+        let email = document.getElementById("mail").value;
+        const re = /^[a-z]+@[a-z]+\.[a-z]+$/;
+        let res = re.test(email);
+        if (res) {
+            alert("The email is correct");
+        } else {
+            alert("Incorrect email format");
+        }
+    }
+    </script>
+</body>
+</html>
